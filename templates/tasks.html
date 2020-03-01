@@ -1,0 +1,17 @@
+<html>  
+    <head>
+    </head>
+
+    <body>
+    {% for task in tasks %}
+       {{task.category_name}}
+       {{task.place_name}}
+       {{task.description}}
+       {{task.highly_important}}
+       {{task.beginning_date}}
+    {% endfor %}
+    
+
+    </body>
+
+</html>
