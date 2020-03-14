@@ -7,14 +7,28 @@
         {{task.decription}}
         {{task.highly_important}}
         {{task.beginning_date}}
-        {% endfor %}
+    {% endfor %}
+<ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
 
-<---navbar---->
+
 <div class="navbar-fixed">
     
   <nav class="nav-extended" >
-    <div class="nav-wrapper"> </div>
-    <div class="card-panel teal lighten-2"> </div>
+    <div class="nav-wrapper">
+    <div class="card-panel teal lighten-2">
       <a href="#" class="brand-logo center">Easy Chemistry</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="hide-on-med-and-down">
@@ -31,28 +45,7 @@
       </div>
    </nav>
     </div>
-    
-    
-
-
-
-
- <ul class="collapsible">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-  </ul>
+    </div>
+    </div>
 
 {% endblock %}
-    
-
- 
