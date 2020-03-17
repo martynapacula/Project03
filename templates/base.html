@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <script src="https://kit.fontawesome.com/2283b6befd.js" crossorigin="anonymous"></script>
-   <meta name="viewport" content="width=device-width,
+
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<script src="https://kit.fontawesome.com/2283b6befd.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width,
     initial-scale=1.0" />
- <title> Easy Chemistry </title>
-    </head>
+	<title> Easy Chemistry </title>
+</head>
 
 
-    <body>
-        {% block content %}
-        {% endblock %}
-
-    
+<body>
+	{% block content %}
+	{% endblock %}
 
 
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-         <script type ="text/javascript">
-             $(document).ready(function(){
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
                  $('.collapsible').collapsible();
-             });
-         </script>
-          
-    </body>
+        });
+
+        $('.datepicker').pickadate({
+            selectMonths: true, 
+            selectYears: 15, 
+            today: 'Today',
+            clear: 'Clear',
+            close: 'Ok',
+            closeOnSelect: false 
+        });
+
+
+	</script>
+
+</body>
+
 </html>
