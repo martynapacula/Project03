@@ -24,6 +24,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
                  $('.collapsible').collapsible();
+                 $('select').formSelect();
         });
 
         $('.datepicker').pickadate({
@@ -35,6 +36,9 @@
             closeOnSelect: false 
         });
 
+document.getElementById("matfix").addEventListener("click", function(e) {
+	e.stopPropagation();
+});
 
 	</script>
 
