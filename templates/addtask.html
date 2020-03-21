@@ -4,21 +4,21 @@
 <div class="row">
 	<form action="" method="POST" class="col s12">
 		<div class="row">
-			<div class="input-field col s12">
-				<select>
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">expand_more</i>
+					<select id="category" name="category_name">
+                  <option value="" disabled selected>Choose category</option>
+                  {% for cat in categories %}
+                      <option value="{{cat.Category_name}}">{{cat.Category_name}}</option>
+                  {% endfor %}
                 </select>
-				<label>Materialize Select</label>
+					<label>Experiment Category</label>
+				</div>
 			</div>
-		</div>
-
-		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">device_hub</i>
-				<input id="category_name" name="category_name" type="text" class="validate">
+				<input id="experiment_name" name="experiment_name" type="text" class="validate">
 				<label for="icon_prefix">Experiment Name</label>
 			</div>
 		</div>
