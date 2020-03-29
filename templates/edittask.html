@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3>Edit your experiment</h3>
+<div class="row">
+	<form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
+		<div class="row">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">expand_more</i>
+					<select id="category" name="Category_name">
+                  <option value="" disabled selected>Choose category</option>
+                  {% for cat in categories %}
+                      <option value="{{cat.Category_name}}">{{cat.Category_name}}</option>
+                  {% endfor %}
+                </select>
+					<label>Experiment Category</label>
+				</div>
+			</div>
+			<div class="input-field col s12">
+				<i class="material-icons prefix">device_hub</i>
+				<input id="experiment_name" name="experiment_name" type="text" class="validate">
+				<label for="icon_prefix">Experiment Name</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">post_add</i>
+				<textarea name="description" id="description" class="materialize-textarea"></textarea>
+				<label for="icon_telephone">Experimental method</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12" id="matfix">
+				<i class="material-icons prefix">today</i>
+				<input id="beginning_date" name="beginning_date" type="text" class="datepicker">
+				<label for="icon_prefix">Date completed</label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="switch">
+				<label>
+                 Non-hazardous
+                 <input id="non_hazardous" name="non_hazardous" type="checkbox">
+                 <span class="lever"></span>
+                 Hazardous
+                </label>
+			</div>
+		</div>
+		<div class="row">
+			<button class="btn waves-effect waves-light" type="submit" name="action">Submit new experiment
+               <i class="material-icons right">post_add</i>
+            </button>
+		</div>
+
+	</form>
+</div>
+{% endblock %}
