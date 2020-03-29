@@ -1,30 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="row">
+	<ul class="collapsible" data-collapsible="accordion">
+		{% for task in tasks %}
+		<li>
+			<div class="collapsible-header">
+				<div class="col s3">
+					<i class="material-icons">keyboard_arrow_down</i>
+					<a class="waves-effect waves-light btn btn_small_one">Completed</a>
+					<a class="waves-effect waves-light btn btn_small blue">Edit</a>
 
-<ul class="collapsible" data-collapsible="accordion">
-	{% for task in tasks %}
-	<li>
-		<div class="collapsible-header">
-			<div class="col s3">
-				<i class="material-icons">keyboard_arrow_down</i>
-                <a class="waves-effect waves-light btn btn_small">Completed</a>
-                <a class="waves-effect waves-light btn btn_small">Edit</a>
-
+				</div>
+				<div class="task_header col s9">
+					<strong>{{task.Category_name}} </strong> - {{task.beginning_date}}
+				</div>
 			</div>
-			<div class="col s9">
-				<strong>{{task.Category_name}} </strong> - {{task.beginning_date}}
-			</div>
-		</div>
-		<div class="collapsible-body">
-			<span>
+			<div class="collapsible-body">
+				<span>
                 {{task.description}}
             </span>
-		</div>
-	</li>
-	{% endfor %}
-
-</ul>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
 
 
 <div class="navbar-fixed">
@@ -50,6 +51,3 @@
 		</div>
 	</nav>
 </div>
-
-
-{% endblock %}
