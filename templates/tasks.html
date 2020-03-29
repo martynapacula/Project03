@@ -5,12 +5,13 @@
 <ul class="collapsible" data-collapsible="accordion">
 	{% for task in tasks %}
 	<li>
-		<div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
-			<strong>{{task.Category_name}} </strong> - {{task.beginning_date}}
+		<div class="collapsible-header">
+			<i class="material-icons">keyboard_arrow_down</i> <strong>{{task.Category_name}} </strong> -
+			{{task.beginning_date}}
 		</div>
 		<div class="collapsible-body">
 			<span>
-                {{task.decription}}
+                {{task.description}}
             </span>
 		</div>
 	</li>
