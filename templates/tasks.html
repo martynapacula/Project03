@@ -6,8 +6,15 @@
 	{% for task in tasks %}
 	<li>
 		<div class="collapsible-header">
-			<i class="material-icons">keyboard_arrow_down</i> <strong>{{task.Category_name}} </strong> -
-			{{task.beginning_date}}
+			<div class="col s3">
+				<i class="material-icons">keyboard_arrow_down</i>
+                <a class="waves-effect waves-light btn btn_small">Completed</a>
+                <a class="waves-effect waves-light btn btn_small">Edit</a>
+
+			</div>
+			<div class="col s9">
+				<strong>{{task.Category_name}} </strong> - {{task.beginning_date}}
+			</div>
 		</div>
 		<div class="collapsible-body">
 			<span>
