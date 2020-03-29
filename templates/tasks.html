@@ -1,46 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    
+
 <ul class="collapsible" data-collapsible="accordion">
-    {% for task in tasks %}
-    <li>
-        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
-        <strong>{{task.Category_name}} </strong> - {{task.beginning_date}}
-        </div>
-        <div class="collapsible-body">
-            <span>
+	{% for task in tasks %}
+	<li>
+		<div class="collapsible-header"><i class="material-icons">keyboard_arrow_down</i>
+			<strong>{{task.Category_name}} </strong> - {{task.beginning_date}}
+		</div>
+		<div class="collapsible-body">
+			<span>
                 {{task.decription}}
             </span>
-        </div>
-    </li>
-    {% endfor %}
+		</div>
+	</li>
+	{% endfor %}
 
 </ul>
 
 
 <div class="navbar-fixed">
-    
-  <nav class="nav-extended" >
-    <div class="nav-wrapper">
-    <div class="card-panel teal lighten-2">
-      <a href="#" class="brand-logo center">Easy Chemistry</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="hide-on-med-and-down">
-       
-      </ul>
-    
-    <div class="nav-content center">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1">Experiments</a></li>
-        <li class="tab"><a class="active" href="#test2">Biochemistry Experiements</a></li>
-        <li class="tab "><a href="#test3">Facts</a></li>
-        
-      </ul>
-      </div>
-   </nav>
-    </div>
-    </div>
-    </div>
+
+	<nav class="nav-extended">
+		<div class="nav-wrapper">
+			<div class="card-panel teal lighten-2">
+				<a href="#" class="brand-logo center">Easy Chemistry</a>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="hide-on-med-and-down">
+
+				</ul>
+
+				<div class="nav-content center">
+					<ul class="tabs tabs-transparent">
+						<li class="tab"><a href="#test1">Experiments</a></li>
+						<li class="tab"><a class="active" href="#test2">Biochemistry Experiements</a></li>
+						<li class="tab "><a href="#test3">Facts</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
 
 {% endblock %}
