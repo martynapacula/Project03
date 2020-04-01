@@ -10,7 +10,11 @@
 					<select id="category" name="Category_name">
                   <option value="" disabled selected>Choose category</option>
                   {% for cat in categories %}
+                      {% if cat.Category_name == task.Category_name%}
+                      <option value="{{cat.Category_name}}" selected>{{cat.Category_name}}</option>
+                      {% else %}
                       <option value="{{cat.Category_name}}">{{cat.Category_name}}</option>
+                    {% endif %}
                   {% endfor %}
                 </select>
 					<label>Experiment Category</label>
@@ -18,14 +22,14 @@
 			</div>
 			<div class="input-field col s12">
 				<i class="material-icons prefix">device_hub</i>
-				<input id="experiment_name" name="experiment_name" type="text" class="validate">
+				<input id="experiment_name" name="experiment_name" type="text" class="validate" value="{{task.experiment_name}}">
 				<label for="icon_prefix">Experiment Name</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">post_add</i>
-				<textarea name="description" id="description" class="materialize-textarea"></textarea>
+				<textarea name="description" id="description" class="materialize-textarea">{{task.description}}</textarea>
 				<label for="icon_telephone">Experimental method</label>
 			</div>
 		</div>
