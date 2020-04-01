@@ -44,8 +44,12 @@
 		<div class="row">
 			<div class="switch">
 				<label>
-                 Non-hazardous
-                 <input id="non_hazardous" name="non_hazardous" type="checkbox">
+                    {% if task.is_urgent %}
+                           Non-hazardous
+                          <input id="non_hazardous" name="non_hazardous" type="checkbox" checked>
+                    {% else %}
+                          <input id="non_hazardous" name="non_hazardous" type="checkbox">
+                    {% endif %}
                  <span class="lever"></span>
                  Hazardous
                 </label>
@@ -59,4 +63,12 @@
 
 	</form>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+<script type="text/javascript" >
+    $(document).ready(function(){
+    beginning_date = Date.parse('{{task.beginning_date}}');
+    $('#beginning_date').pickadate('picker').set('select', beginning_date, {format: 'dd/mm/yyyy'}).trigger('change')
+    });
+</script>
 {% endblock %}
