@@ -36,8 +36,18 @@ def edit_task(task_id):
     all_categories = mongo.db.categories.find()
     return render_template('edittask.html', task=the_task, categories=all_categories)
 
+@app.route('/update_task/<task_id>', methods=["POST"])
+def update_task(task_id):
+    tasks = mongo.db.tasks
+    tasks.update( {'_id': ObjectId(task_id)},
+    {
+       'task_name': request.form.get('task_name'), 
+       'category_name': request.form.get('category_name'),
+       'description': request.form.get('description'), 
+       'beginning_date': request.form.get('beginnin_date'),
+       'non_hazardous': request.form.get('non_hazardous')
 
-
+    })
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
