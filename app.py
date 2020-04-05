@@ -48,6 +48,7 @@ def update_task(task_id):
        'non_hazardous': request.form.get('non_hazardous')
 
     })
+    return redirect(url_for('get_tasks'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
