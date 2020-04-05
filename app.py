@@ -44,7 +44,7 @@ def update_task(task_id):
        'experiment_name': request.form.get('experiment_name'), 
        'Category_name': request.form.get('Category_name'),
        'description': request.form.get('description'), 
-       'beginning_date': request.form.get('beginnin_date'),
+       'beginning_date': request.form.get('beginning_date'),
        'non_hazardous': request.form.get('non_hazardous')
 
     })
