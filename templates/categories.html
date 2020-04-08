@@ -1,28 +1,25 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="row">
-	<ul class="collapsible" data-collapsible="accordion">
-		{% for task in tasks %}
-		<li>
-			<div class="collapsible-header">
-				<div class="col s3">
-					<i class="material-icons">keyboard_arrow_down</i>
-					<a href="{{url_for('delete_task', task_id=task._id)}}"  class="waves-effect waves-light btn btn_small_one">Completed</a>
-					<a href="{{url_for('edit_task', task_id=task._id)}}"  class="waves-effect waves-light btn btn_small blue">Edit</a>
 
-				</div>
+	<h3>Experiment Categories</h3>
+
+	
+		<ul class="collapsible" data-collapsible="accordion">
+			{% for category in categories %}
+			<li>
+				<div class="collapsible-header">
+					<a href="{{url_for('delete_task', task_id=task._id)}}"
+						class="waves-effect waves-light btn btn_small_one">Del</a>
+					<a href="{{url_for('edit_task', task_id=task._id)}}"
+						class="waves-effect waves-light btn btn_small blue">Edit</a>
+				
 				<div class="task_header col s9">
-					<strong>{{task.Category_name}} </strong> - {{task.beginning_date}}
+					<strong>{{category.category_name}} </strong>
 				</div>
-			</div>
-			<div class="collapsible-body">
-				<span>
-                <strong>{{task.experiment_name}} </strong> : {{task.description}}
-            </span>
-			</div>
-		</li>
-		{% endfor %}
-	</ul>
+               </div>
+			</li>
+			{% endfor %}
+		</ul>
 </div>
 {% endblock %}
