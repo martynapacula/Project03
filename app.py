@@ -26,29 +26,36 @@ def add_task():
 
 @app.route('/insert_task', methods=['POST'])
 def insert_task():
-    tasks=mongo.db.tasks
+    tasks = mongo.db.tasks
     tasks.insert_one(request.form.to_dict())
     return redirect(url_for('get_tasks'))
 
 @app.route('/edit_task/<task_id>')
 def edit_task(task_id):
-    the_task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    all_categories = mongo.db.categories.find()
-    return render_template('edittask.html', task=the_task, categories=all_categories)
+    the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    all_categories =  mongo.db.categories.find()
+    return render_template('edittask.html', task=the_task,
+                           categories=all_categories)
 
 @app.route('/update_task/<task_id>', methods=["POST"])
 def update_task(task_id):
     tasks = mongo.db.tasks
     tasks.update( {'_id': ObjectId(task_id)},
     {
-       'experiment_name': request.form.get('experiment_name'), 
-       'Category_name': request.form.get('Category_name'),
-       'description': request.form.get(')escription'), 
-       'beginning_date': request.form.get('beginnin_date'),
-       'non_hazardous': request.form.get('non_hazardous')
+        'experiment_name': request.form.get('experiment_name'), 
+        'Category_name': request.form.get('Category_name'),
+        'description': request.form.get('description'), 
+        'beginning_date': request.form.get('beginning_date'),
+        'non_hazardous': request.form.get('non_hazardous')
 
     })
     return redirect(url_for('get_tasks'))
+
+@app.route('/delete_task/<task_id>')
+def delete_task(task_id):
+    mongo.db.tasks.remove({'_id': ObjectId(task_id)})
+    return redirect(url_for('get_tasks'))
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
