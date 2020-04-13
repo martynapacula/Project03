@@ -74,9 +74,13 @@ def edit_category(category_id):
 def update_category(category_id):
     mongo.db.categories.update(
         {'_id': ObjectId(category_id)},
-        {'category_name': request.form.get('category_name')})
+        {'Category_name': request.form.get('Category_name')})
     return redirect(url_for('get_categories'))
 
+@app.route('/delete_category/<category_id>')
+def delete_category(category_id):
+    mongo.db.category.remove({'_id': ObjectId(category_id)})
+    return redirect(url_for('get_categories'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
