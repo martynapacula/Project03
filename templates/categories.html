@@ -9,8 +9,10 @@
 		{% for category in categories %}
 		<li>
 			<div class="collapsible-header">
-				<a href="{{url_for('delete_category', category_id =category._id)}}" class="waves-effect waves-light btn btn_small_one">Del</a>
-				<a href="{{url_for('edit_category', category_id =category._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+				<a href="{{url_for('delete_category', category_id =category._id)}}"
+					class="waves-effect waves-light btn btn_small_one">Del</a>
+				<a href="{{url_for('edit_category', category_id =category._id)}}"
+					class="waves-effect waves-light btn btn_small blue">Edit</a>
 
 				<div class="task_header">
 					<strong>{{category.Category_name}} </strong>
@@ -20,4 +22,11 @@
 		{% endfor %}
 	</ul>
 </div>
+
+<div class="row">
+	<a href="{{url_for('add_category')}}"
+		class="waves-effect waves-light btn"><i class="material-icons right">playlist_add</i>Add experiment Category
+	</a>
+</div>
+
 {% endblock %}
