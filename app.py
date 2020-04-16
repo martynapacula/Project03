@@ -42,7 +42,7 @@ def edit_task(task_id):
 def update_task(task_id):
     tasks = mongo.db.tasks
     tasks.update({'_id': ObjectId(task_id)},
-                 {
+    {
         'experiment_name': request.form.get('experiment_name'),
         'Category_name': request.form.get('Category_name'),
         'description': request.form.get('description'),
