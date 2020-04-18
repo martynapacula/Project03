@@ -13,13 +13,13 @@
 
 <body>
 
-<!--------Navbar -->
+	<!--------Navbar -->
 	<header>
 
-		<nav>
+		<nav class="teal">
 			<div class="nav-wrapper">
 				<a href="{{url_for('get_tasks')}}" class="brand-logo">Easy Chemistry</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a href="{{url_for('get_tasks')}}">Chemistry Experiemnts</a></li>
 					<li><a href="{{url_for('add_task')}}">New experiment</a></li>
@@ -35,37 +35,69 @@
 
 	</header>
 
-<!--------Section:Slider -->
+	<!--------Section:Slider -->
 
-<section class="slider">
-<ul class="slides">
-      <li>
-        <img src="https://marketingland.com/wp-content/ml-loads/2017/01/test-experiment-science-chemistry-ss-1920.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://thumbs.dreamstime.com/b/scientist-equipment-science-experiments-laboratory-glassware-containing-chemical-liquid-research-analyzing-159491611.jpg"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://images.medicaldaily.com/sites/medicaldaily.com/files/styles/headline/public/2016/03/16/scientist-lab.jpg"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-</section>
+	<section class="slider">
+		<ul class="slides">
+			<li>
+				<img src="https://marketingland.com/wp-content/ml-loads/2017/01/test-experiment-science-chemistry-ss-1920.jpg">
+				<div class="caption center-align">
+					<h2 class="heading">Organize your Leaving Cert Experiments </h2>
+				</div>
+			</li>
+			<li>
+				<img src="https://steemitimages.com/640x0/https://f.top4top.net/p_71366by11.jpg">
+				<div class="caption left-align">
+					<h2 class="heading"> Make a list of your favourite experiments</h2>
+				</div>
+			</li>
+			<li>
+				<img src="https://images.medicaldaily.com/sites/medicaldaily.com/files/styles/headline/public/2016/03/16/scientist-lab.jpg">
+				<div class="caption right-align">
+					<h2 class="heading">Expand your chemistry knowledge</h2>
+				</div>
+			</li>
+		</ul>
+	</section>
 	<div class="container">
 		{% block content %}
 		{% endblock %}
+
 	</div>
+
+	<!--------Footer -->
+
+	<footer class="section teal derken-2 white-text center">
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<p class="flow-text">Easy Chemistry &copy; 2020 </p>
+					<a href="htttps://facebook.com" target="_blank" class="white-text">
+						<i class="fab fa-facebook fa-4x"></i>
+					</a>
+					<a href="htttps://twitter.com" target="_blank" class="white-text">
+						<i class="fab fa-twitter fa-4x"></i>
+					</a>
+					<a href="htttps://linkedin.com" target="_blank" class="white-text">
+						<i class="fab fa-linkedin fa-4x"></i>
+					</a>
+					<a href="htttps://googleplus.com" target="_blank" class="white-text">
+						<i class="fab fa-google-plus fa-4x"></i>
+					</a>
+					<a href="htttps://pinterest.com" target="_blank" class="white-text">
+						<i class="fab fa-pinterest fa-4x"></i>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-------Javascript ---->
+
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -83,6 +115,11 @@
             clear: 'Clear',
             close: 'Ok',
             closeOnSelect: false 
+        });
+
+        
+        $(document).ready(function(){
+            $('.slider').slider();
         });
 
 document.getElementById("matfix").addEventListener("click", function(e) {
