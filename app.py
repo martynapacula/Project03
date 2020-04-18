@@ -63,7 +63,7 @@ def delete_task(task_id):
 def get_categories():
     return render_template('categories.html',
                            categories=mongo.db.categories.find())
-                           
+                       
 
 @app.route('/edit_category/<category_id>')
 def edit_category(category_id):

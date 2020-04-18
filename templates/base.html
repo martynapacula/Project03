@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+<!--------Navbar -->
 	<header>
 
 		<nav>
@@ -23,7 +25,7 @@
 					<li><a href="{{url_for('add_task')}}">New experiment</a></li>
 					<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
 				</ul>
-				<ul class="sidenav" id="mobile-demo">
+				<ul class="side-nav" id="mobile-demo">
 					<li><a href="{{url_for('get_tasks')}}">Chemistry Experiemnts</a></li>
 					<li><a href="{{url_for('add_task')}}">New experiment</a></li>
 					<li><a href="{{url_for('get_categories')}}">Manage Categories</a></li>
@@ -33,6 +35,33 @@
 
 	</header>
 
+<!--------Section:Slider -->
+
+<section class="slider">
+<ul class="slides">
+      <li>
+        <img src="https://marketingland.com/wp-content/ml-loads/2017/01/test-experiment-science-chemistry-ss-1920.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://thumbs.dreamstime.com/b/scientist-equipment-science-experiments-laboratory-glassware-containing-chemical-liquid-research-analyzing-159491611.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.medicaldaily.com/sites/medicaldaily.com/files/styles/headline/public/2016/03/16/scientist-lab.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+</section>
 	<div class="container">
 		{% block content %}
 		{% endblock %}
@@ -44,7 +73,7 @@
 		$(document).ready(function(){
             $('.collapsible').collapsible();
             $('select').material_select();
-             $(".button-collapse").sideNav();
+            $(".button-collapse").sideNav();
         });
 
         $('.datepicker').pickadate({
