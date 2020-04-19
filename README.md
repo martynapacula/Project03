@@ -131,6 +131,7 @@ https://fontawesome.com/
 ### Content:
 
 The contents of this application was largely taken from Materializecss and Code institute to meet the web application functionality and purpose. 
+The expriment methodology was taken from Less Stress More Success - Chemistry Revision, Leaving Cert by Eamonn Healy 2011
 
 
 ### Media:
