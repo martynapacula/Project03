@@ -65,8 +65,8 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-<script type="text/javascript" >
-    $(document).ready(function(){
+<script type="text/javascript">
+	$(document).ready(function(){
     beginning_date = Date.parse('{{task.beginning_date}}');
     $('#beginning_date').pickadate('picker').set('select', beginning_date, {format: 'dd/mm/yyyy'}).trigger('change')
     });
