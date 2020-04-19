@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>Experiments to complete </h3>
+<h3>Experiments</h3>
 <div class="row">
 	<ul class="collapsible" data-collapsible="accordion">
 		{% for task in tasks %}
@@ -10,7 +10,7 @@
 				<div class="col s3">
 					<i class="material-icons">keyboard_arrow_down</i>
 					<a href="{{url_for('delete_task', task_id=task._id)}}"
-						class="waves-effect waves-light btn btn_small_one">Completed</a>
+						class="waves-effect waves-light btn btn_small_one">Delete</a>
 					<a href="{{url_for('edit_task', task_id=task._id)}}"
 						class="waves-effect waves-light btn btn_small blue">Edit</a>
 
