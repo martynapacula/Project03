@@ -8,7 +8,7 @@ Easy chemistry can be used by anyone that has a passiom for chemistry subject. T
 
 Please find a live demo of Easy Chemistry appication below:
 
-https://github.com/martynapacula/Project03
+https://easy-chemistry-flask-mongo.herokuapp.com/
 
 
 ## UX design:
@@ -100,9 +100,12 @@ The website was tested on the Responsinator to ensure good working website.
 This website was tested on the following devices:
 
 Samsung galaxy s9 and s5
+
 Samsung Tablet A
+
 Huawei p30
-Toshiba Satellite laptop similar
+
+Toshiba Satellite laptop 
 
 ## Deployment:
 
@@ -110,6 +113,8 @@ Heroku was used to deploy the final version of the application code. Heroku is o
 
 Information listed in the website below was used to deploy the app to heroku
 https://devcenter.heroku.com/categories/deployment
+
+Final version of the application: https://easy-chemistry-flask-mongo.herokuapp.com/
 
 ## Credits:
 
