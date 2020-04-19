@@ -128,7 +128,9 @@ The contents of this application was largely taken from Materializecss and Code 
 ### Media:
 
 Image number one in slider: https://images.pond5.com/chemical-experience-black-background-fluorescent-footage-073588364_prevstill.jpeg
+
 Image number two in slider: https://us.123rf.com/450wm/tawhy/tawhy1801/tawhy180100394/92757090-chemistry-flasks-isolated-on-black-background.jpg?ver
+
 Image number three in slider:https://media.istockphoto.com/photos/biochemistry-picture-id182502698?k=6&m=182502698&s=612x612&w=0&h=NAbxbj2tIcGLpRmgzSpPun1d3j48XrtFKzJKMeYtRho=
  
 Logo included in the footer:
