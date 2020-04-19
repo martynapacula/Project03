@@ -124,6 +124,7 @@ https://materializecss.com/
 https://courses.codeinstitute.net/
 https://www.youtube.com/watch?v=MaP3vO-vEsg&t=556s
 https://stackoverflow.com/
+https://fontawesome.com/
 
 
 
