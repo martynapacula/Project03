@@ -114,6 +114,8 @@ Heroku was used to deploy the final version of the application code. Heroku is o
 Information listed in the website below was used to deploy the app to heroku
 https://devcenter.heroku.com/categories/deployment
 
+Code institute tutorial video on how to depoky the app to heroku was also used. 
+
 Final version of the application: https://easy-chemistry-flask-mongo.herokuapp.com/
 
 ## Credits:
