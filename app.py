@@ -11,8 +11,8 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_tasks')
-def get_tasks():
+@app.route('/get_experiment')
+def get_experiment():
     return render_template("tasks.html",
                            tasks=mongo.db.tasks.find())
 
@@ -50,13 +50,13 @@ def update_task(task_id):
         'non_hazardous': request.form.get('non_hazardous')
 
     })
-    return redirect(url_for('get_tasks'))
+    return redirect(url_for('get_experiment'))
 
 
 @app.route('/delete_task/<task_id>')
 def delete_task(task_id):
     mongo.db.tasks.remove({'_id': ObjectId(task_id)})
-    return redirect(url_for('get_tasks'))
+    return redirect(url_for('get_experiment'))
 
 
 @app.route('/get_categories')
